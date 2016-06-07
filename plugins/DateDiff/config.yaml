@@ -1,0 +1,9 @@
+id: DateDiff
+name: DateDiff
+key: DateDiff
+version: 1.0.0
+author_link: https://www.anothersky.pw/
+author_name: Hideki Abe
+tags:
+    block:
+        DateDiff?: $DateDiff::DateDiff::Tags::_hdlr_date_diff
