@@ -21,14 +21,16 @@ sub _hdlr_date_diff {
             my $target = timelocal( 0, 0, 0, $target_day, $target_month, $target_year );
             my $duration = $base - $target;
 
-            if (exists($args->{ le })) {
-                if ($duration <= 86400 * $args->{ le }) {
+            if ($args->{ interval } > 0) {
+                $duration = $duration * -1;
+
+                if ($duration > 0 && $duration < 86400 * $args->{ interval }) {
                     return 1;
                 } else {
                     return 0;
                 }
-            } elsif (exists($args->{ lt })) {
-                if ($duration < 86400 * $args->{ lt }) {
+            } else {
+                if ($duration > 0 && $duration < 86400 * $args->{ interval } * -1) {
                     return 1;
                 } else {
                     return 0;
