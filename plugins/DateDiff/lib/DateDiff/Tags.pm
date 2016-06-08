@@ -24,13 +24,13 @@ sub _hdlr_date_diff {
             if ($args->{ interval } > 0) {
                 $duration = $duration * -1;
 
-                if ($duration > 0 && $duration < 86400 * $args->{ interval }) {
+                if ($duration >= 0 && $duration < 86400 * $args->{ interval }) {
                     return 1;
                 } else {
                     return 0;
                 }
             } else {
-                if ($duration > 0 && $duration < 86400 * $args->{ interval } * -1) {
+                if ($duration >= 0 && $duration < 86400 * $args->{ interval } * -1) {
                     return 1;
                 } else {
                     return 0;

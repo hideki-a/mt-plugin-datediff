@@ -13,13 +13,13 @@ function smarty_block_mtdatediff ($args, $content, &$ctx) {
         if ($interval > 0) {
             $duration = $duration * -1;
 
-            if ($duration > 0 && $duration < 86400 * $interval) {
+            if ($duration >= 0 && $duration < 86400 * $interval) {
                 $flag = 1;
             } else {
                 $flag = 0;
             }
         } else {
-            if ($duration > 0 && $duration < 86400 * $interval * -1) {
+            if ($duration >= 0 && $duration < 86400 * $interval * -1) {
                 $flag = 1;
             } else {
                 $flag = 0;
