@@ -6,9 +6,9 @@
 
 <dl>
 <dt>今日から7日先まで</dt>
-<dd>`interval="7"`</dd>
+<dd><code>interval="7"</code></dd>
 <dt>今日から7日前まで</dt>
-<dd>`interval="-7"`</dd>
+<dd><code>interval="-7"</code></dd>
 </dl>
 
 ## サンプルコード
