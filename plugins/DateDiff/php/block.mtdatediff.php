@@ -7,7 +7,7 @@ function smarty_block_mtdatediff ($args, $content, &$ctx) {
     if ($var_name) {
         $date_str = $ctx->__stash['vars'][ $var_name ];
         $target_ts = strtotime(preg_replace("/(\d{4})(\d{2})(\d{2})/", "$1-$2-$3", $date_str));
-        $base_ts = time();
+        $base_ts = strtotime(date('Y-m-d'));
         $duration = $base_ts - $target_ts;
 
         if ($interval > 0) {
