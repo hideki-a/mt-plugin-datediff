@@ -19,7 +19,7 @@ function smarty_block_mtdatediff ($args, $content, &$ctx) {
                 $flag = 0;
             }
         } else {
-            if ($duration >= 0 && $duration < 86400 * $interval * -1) {
+            if ($duration >= 0 && $duration <= 86400 * $interval * -1) {
                 $flag = 1;
             } else {
                 $flag = 0;

@@ -30,7 +30,7 @@ sub _hdlr_date_diff {
                     return 0;
                 }
             } else {
-                if ($duration >= 0 && $duration < 86400 * $args->{ interval } * -1) {
+                if ($duration >= 0 && $duration <= 86400 * $args->{ interval } * -1) {
                     return 1;
                 } else {
                     return 0;
